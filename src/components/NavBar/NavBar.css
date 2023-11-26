@@ -1,0 +1,132 @@
+:root {
+    --blue: #003DA6;
+    --white: #ffffff;
+    --green: #0bb06e; 
+    --red: #ff2600;
+    --blueDark: #002169; 
+    --greenDark: #038450; 
+    --black: #000; 
+    --gray: #c4c7d5;
+  }
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+
+.sidebar {
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    width: 200px;
+    background-color: var(--gray);
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+  }
+
+  /*Logo */
+  .sidebar .logo {
+    width: 50px;
+  }
+
+  /*Contador Icono Carrito*/
+  .cart-icon {
+    position: relative;
+    display: inline-block;
+}
+
+.cart-icon i {
+    font-size: 24px;
+    color: var(--black);
+}
+
+.cart-icon i:active {
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+.cart-count {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--red); 
+  color: var(--white); 
+  border-radius: 50%;
+  padding: 4px 8px; 
+  font-size: 12px; 
+}
+
+
+  .sidebar a {
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    display: block;
+    color: var(--black);
+    padding: 16px;
+    text-decoration: none;
+  }
+  
+  .sidebar a.active {
+    background-color: var(--blue);
+    color: var(--white);
+  }
+
+  .sidebar svg {
+    background-color: var(--blue);
+    color: var(--white);
+  }
+  
+  .sidebar a:hover:not(.active) {
+    background-color: var(--gray);
+    color:var(--blueDark);
+  }
+  
+
+  @media screen and (max-width: 780px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar a {
+        text-align: center;
+        float: left;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+
+      .sidebar .logo{
+        margin-top: -10px;
+        align-items: center;
+      }
+
+      .cart-icon {
+        display: block; 
+        text-align: right; 
+    }
+
+    .cart-icon i {
+        font-size: 20px; 
+        margin-bottom: 5px;
+    }
+
+    .cart-count {
+        position: static; 
+        background-color: var(--red);
+        color: var(--white);
+        border-radius: 50%;
+        padding: 2px 6px;
+        font-size: 10px;
+    }
+  }
+  
+  @media screen and (max-width: 400px) {
+    .sidebar a {
+      text-align: center;
+      float: none;
+    }
+  }
