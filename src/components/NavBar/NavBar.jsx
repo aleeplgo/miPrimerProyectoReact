@@ -5,7 +5,7 @@ import "./NavBar.css";
 function NavBar() {
   return (
     <div class="sidebar">
-        <a href="index.html"><img class="logo" src="src/assets/logom4.png"/></a>
+        <a href="index.html"><img class="logo" src="dist/assets/logom4-7E1Om_ad.png"/></a>
         <a class="active" href="#">Inicio</a>
         <a href="#">Portafolio</a>
         <a href="#">Paquetes</a>
